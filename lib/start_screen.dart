@@ -31,7 +31,7 @@ class StartScreen extends StatelessWidget {
             children: [
               Spacer(),
               Lottie.asset(
-                'assets/images/nyancat.json',
+                '../assets/images/nyancat.json',
                 width: deviceWidth / 2,
               ),
               Text(

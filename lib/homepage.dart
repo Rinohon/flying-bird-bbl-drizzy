@@ -26,8 +26,8 @@ class _HomePageState extends State<HomePage> {
   double upperbarrierTwoHeight = 0.0;
   double lowerBarrierTwoHeight = 0.0;
 
-  static double barrierXOne = -2.5;
-  double barrierXTwo = barrierXOne + 1.75; // 0.75
+  static double barrierXOne = 2.5;
+  double barrierXTwo = barrierXOne - 1.75; // 0.75
 
   int score = 0;
   int highScore = 0;
@@ -42,8 +42,8 @@ class _HomePageState extends State<HomePage> {
       time = 0;
       height = 0;
       initialHeight = birdYAxis;
-      barrierXOne = -2.5;
-      barrierXTwo = barrierXOne + 1.75;
+      barrierXOne = 2.5;
+      barrierXTwo = barrierXOne - 1.75;
       score = 0;
     });
   }
@@ -104,8 +104,8 @@ class _HomePageState extends State<HomePage> {
       time = 0;
       height = 0;
       initialHeight = birdYAxis;
-      barrierXOne = -2.5;
-      barrierXTwo = barrierXOne + 1.75;
+      barrierXOne = 1.5;
+      barrierXTwo = barrierXOne - 1.75;
       score = 0;
     });
     scoreTimer = Timer.periodic(
@@ -204,7 +204,7 @@ class _HomePageState extends State<HomePage> {
                 image: DecorationImage(
                   fit: BoxFit.fill,
                   image: AssetImage(
-                    'assets/images/game_wallpaper.jpg',
+                    '../assets/images/city.png',
                   ),
                 ),
               ),
@@ -264,7 +264,7 @@ class _HomePageState extends State<HomePage> {
               child: Container(
                 width: screenWidth / 2.5,
                 decoration: BoxDecoration(
-                  color: Colors.blue[900],
+                  color: Colors.purple[600],
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
                     width: 2,

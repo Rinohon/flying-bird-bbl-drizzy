@@ -12,7 +12,7 @@ class MyBarrier extends StatelessWidget {
       width: screenWidth / 4,
       height: size,
       decoration: BoxDecoration(
-        color: Colors.lightBlue,
+        color: Colors.purple[800],
         border: Border.all(
           width: 4,
           color: Colors.white,
