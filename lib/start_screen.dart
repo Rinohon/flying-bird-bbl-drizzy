@@ -1,7 +1,9 @@
-import 'package:fbird3/homepage.dart';
+import 'package:fbird3/homepage.dart' as homepage;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 import 'package:lottie/lottie.dart';
+import 'package:fbird3/select.dart' as select;
 
 class StartScreen extends StatelessWidget {
   @override
@@ -30,13 +32,13 @@ class StartScreen extends StatelessWidget {
           child: Column(
             children: [
               Spacer(),
-              Lottie.asset(
-                '../assets/images/nyancat.json',
+              Image.asset(
+                '../assets/images/bear.gif',
                 width: deviceWidth / 2,
               ),
               Text(
-                'Flying Bird',
-                style: TextStyle(
+                'MAAZII',
+                style: TextStyle( 
                   color: Colors.white,
                   fontSize: 48,
                   fontWeight: FontWeight.w900,
@@ -45,11 +47,11 @@ class StartScreen extends StatelessWidget {
               Spacer(),
               MenuButton(
                 width: deviceWidth,
-                color: Colors.blue,
-                textColor: Colors.white,
-                text: 'Start Game',
+                color: Colors.white,
+                textColor: Colors.blue,
+                text: 'Эхлэх',
                 onPress: () {
-                  Navigator.of(context).pushNamed(HomePage.ROUTE_NAME);
+                  Navigator.of(context).pushNamed(homepage.HomePage.ROUTE_NAME);
                 },
               ),
               SizedBox(
@@ -60,11 +62,11 @@ class StartScreen extends StatelessWidget {
               ),
               MenuButton(
                 width: deviceWidth,
-                color: Colors.red,
+                color: Colors.blue,
                 textColor: Colors.white,
-                text: 'Quit',
+                text: 'Дэлгүүр',
                 onPress: () {
-                  SystemNavigator.pop();
+                  Navigator.of(context).pushNamed(select.Select.ROUTE_NAME);
                 },
               ),
               Spacer(),

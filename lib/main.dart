@@ -2,6 +2,7 @@ import 'package:fbird3/homepage.dart';
 import 'package:fbird3/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fbird3/select.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       home: StartScreen(),
       routes: {
         HomePage.ROUTE_NAME: (context) => HomePage(),
+        Select.ROUTE_NAME: (context) => Select(),
       },
     );
   }

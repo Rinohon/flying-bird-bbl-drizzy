@@ -26,8 +26,8 @@ class _HomePageState extends State<HomePage> {
   double upperbarrierTwoHeight = 0.0;
   double lowerBarrierTwoHeight = 0.0;
 
-  static double barrierXOne = 2.5;
-  double barrierXTwo = barrierXOne - 1.75; // 0.75
+  static double barrierXOne = -2.5;
+  double barrierXTwo = barrierXOne + 1.75; // 0.75
 
   int score = 0;
   int highScore = 0;
@@ -42,8 +42,8 @@ class _HomePageState extends State<HomePage> {
       time = 0;
       height = 0;
       initialHeight = birdYAxis;
-      barrierXOne = 2.5;
-      barrierXTwo = barrierXOne - 1.75;
+      barrierXOne = -2.5;
+      barrierXTwo = barrierXOne + 1.75;
       score = 0;
     });
   }
@@ -66,10 +66,10 @@ class _HomePageState extends State<HomePage> {
     await CoolAlert.show(
       context: context,
       type: CoolAlertType.info,
-      title: 'Game Over',
-      text: score <= 0 ? 'Hard Luck 😂' : 'Great! you got $score points! 🤩',
-      confirmBtnText: 'Retry',
-      cancelBtnText: 'Exit',
+      title: 'Та Хожигдлоо',
+      text: score <= 0 ? 'Амжилт 😂' : 'Гайхалтай! Та $score оноо авлаа! 🤩',
+      confirmBtnText: 'Дахин эхлэх',
+      cancelBtnText: 'Гарах',
       confirmBtnColor: Colors.cyan,
       cancelBtnTextStyle: TextStyle(
         color: Colors.red[900],
@@ -104,8 +104,8 @@ class _HomePageState extends State<HomePage> {
       time = 0;
       height = 0;
       initialHeight = birdYAxis;
-      barrierXOne = 1.5;
-      barrierXTwo = barrierXOne - 1.75;
+      barrierXOne = -2.5;
+      barrierXTwo = barrierXOne + 1.75;
       score = 0;
     });
     scoreTimer = Timer.periodic(
@@ -185,6 +185,7 @@ class _HomePageState extends State<HomePage> {
 
     upperbarrierTwoHeight = screenHeight / 5;
     lowerBarrierTwoHeight = screenHeight / 2.5;
+
     return GestureDetector(
       onTap: () {
         if (gameStarted) {
@@ -213,13 +214,13 @@ class _HomePageState extends State<HomePage> {
                 ? Container()
                 : Center(
                     child: Column(
-                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: 120,
+                          height: 200,
                         ),
                         Text(
-                          'Tap to play',
+                          'Э х л э х',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w900,
@@ -286,7 +287,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         Text(
-                          'Game\nScore'.toUpperCase(),
+                          'Таны\nОноо'.toUpperCase(),
                           style: TextStyle(
                             color: Colors.white,
                             letterSpacing: 4,
@@ -327,7 +328,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         Text(
-                          'Highest\nScore'.toUpperCase(),
+                          'Рекорд\n'.toUpperCase(),
                           style: TextStyle(
                             color: Colors.white,
                             letterSpacing: 4,
